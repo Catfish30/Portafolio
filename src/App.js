@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" exact element={<Main />} />    
+        <Route path="/" exact element={<Main />} />
       </Routes>
     </Router>
   )
