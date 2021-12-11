@@ -1,12 +1,14 @@
 import React from 'react'
-import Header from '../components/Header'
 import Home from '../components/Home'
+import NavTop from '../components/NavTop'
+import Projects from '../components/Projects'
 
 export default function Main() {
     return (
         <div>
-            <Header />
+            <NavTop />
             <Home />
+            <Projects />
         </div>
     )
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 // import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Main from './views/Main'
-
 export default function App() {
 
 
@@ -10,6 +9,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" exact element={<Main />} />
+
       </Routes>
     </Router>
   )
