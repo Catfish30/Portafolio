@@ -9,10 +9,13 @@ import react from '../assets/react.png'
 import bootstrao from '../assets/bootstrap.png'
 import django from '../assets/django.png'
 import postgres from '../assets/postgres.png'
+// import { useRef } from 'react'
 
 export default function Projects() {
+
+
     return (
-        <div className='contain-projects'>
+        <div className='contain-projects' >
             <h1 className='h1-projects'>Proyectos</h1>
             <div className='card-project'>
                 <div className='info-project'>
@@ -23,8 +26,8 @@ export default function Projects() {
                         <li><img src={js} className='icon-projects'></img></li>
                     </ul>
                     <p>This website is used to calculate a tip according to an individual or fractional account.</p>
-                    <button className='btn-web ' href="https://catfish30.github.io/Practica02/">Website</button>
-                    <button className='btn-git' href="https://github.com/Catfish30/Practica02">GitHub</button>
+                    <button className='btn-web '><a target="_blank" href="https://catfish30.github.io/Practica02/">Website</a></button>
+                    <button className='btn-git'><a target="_blank" href="https://github.com/Catfish30/Practica02">GitHub</a></button>
                 </div>
                 <img src={Webtip} className='img-project'></img>
             </div>
@@ -42,7 +45,7 @@ export default function Projects() {
                     </ul>
                     <p>This is a website of an educational system, both for teachers and students with a grade system.</p>
                     <button className='btn-web ' href="#">Website</button>
-                    <button className='btn-git' href="#">GitHub</button>
+                    <button className='btn-git'><a target="_blank" href="https://github.com/Catfish30/Proyecto-Backend">GitHub</a></button>
                 </div>
                 <img src={Webeducation} className='img-project'></img>
             </div>

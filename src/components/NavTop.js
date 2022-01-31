@@ -1,8 +1,9 @@
 import React from 'react'
-import { useState,useEffect } from 'react';
+import { useState,useEffect, useRef } from 'react';
 import './styles/Header.css'
 import marca from '../assets/marca.png'
-export default function NavTop() {
+import { Link } from 'react-router-dom'
+export default function NavTop({refSection,contactRefSection}) {
 
 
     const [toggleMenu, setToggleMenu]= useState(false)
@@ -24,6 +25,10 @@ export default function NavTop() {
 
     },[])
    
+    const homeSection = useRef(null)
+
+    const goToHomeSection = () => window.scrollTo({ top: homeSection.current.offsetTop, behavior:"smooth" })
+
 
     return (
 
@@ -33,10 +38,10 @@ export default function NavTop() {
             <button className='btn' onClick={toggleNav}><i class="fas fa-bars"></i></button>
             {(toggleMenu || screamWidth >550 ) &&(
                 <ul className='list'>
-                <li className='items'>Home</li>
-                <li className='items'>Projects</li>
-                <li className='items'>Skills</li>
-                <li className='items'>Contact</li>
+                <li className='items' ref={homeSection} onClick={goToHomeSection}>Home</li>
+                <li className='items' onClick={refSection}>Projects</li>
+                {/* <li className='items'>Skills</li> */}
+                <li className='items' onClick={contactRefSection}>Contact</li>
             </ul>
             )}
                         
